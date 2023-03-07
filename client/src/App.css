@@ -65,3 +65,31 @@ li {
 .details_token_others {
   text-align: center;
 }
+
+.coin_container {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.coin_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin_header img {
+  padding: 0.5rem;
+}
+
+.coin_tags { 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.coin_tags div { 
+  border: solid 1px #ddd;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  color: grey;
+}

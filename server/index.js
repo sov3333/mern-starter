@@ -30,6 +30,16 @@ app.get("/coingecko/coins/markets/:id", async (req, res) => {
     }
 })
 
+app.get("/coingecko/coins/:id", async (req, res) => {
+    try {
+        const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${req.params.id}`);
+        res.send(response.data);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Server Error');
+    }
+})
+
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });

@@ -13,7 +13,7 @@ const CategoryDetails = () => {
     // call coingecko /coins/markets api endpoint
     async function fetchCGCoinsMarketsData() {
       const response = await axios.get(`/coingecko/coins/markets/${slug}`);
-      // set the filtered data in state
+      // set the data in state
       setDataCGCoinsMarkets(response.data);
     }
     fetchCGCoinsMarketsData();
@@ -30,7 +30,7 @@ const CategoryDetails = () => {
             <div className="details_token_header">
               <div className="details_token_header_coin">
                 <img src={coin.image} alt={`${coin.symbol}-coin-logo`} style={{ width: '30px', height: '30px', borderRadius: '50%', padding: '0.5rem' }} />
-                <Link to={`/coins/${coin.id}`}>
+                <Link to={`/coins/${coin.id}`} state={{ slug: coin.id }}>
                   <h3>{coin.name} ({coin.symbol.toUpperCase()})</h3>
                 </Link>
               </div>
@@ -62,7 +62,7 @@ const CategoryDetails = () => {
 
             <div className="details_token_others">
               <p>ATH: ${coin.ath} ({coin.ath_change_percentage}%) @ {coin.ath_date}</p>
-              <p>ATL: ${coin.atl} ({coin.atl_change_percentage}) @ {coin.atl_date}</p>
+              <p>ATL: ${coin.atl} ({coin.atl_change_percentage}%) @ {coin.atl_date}</p>
               <p>LAST UPDATED: {coin.last_updated}</p>
             </div>
 
