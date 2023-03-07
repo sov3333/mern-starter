@@ -25,6 +25,8 @@ cd client
 npm start
 ```
 
+3. `npm i millify` for normalizing numbers to readable format
+
 ## Resources
 
 1. https://dev.to/pratham10/how-to-set-up-a-node-js-express-server-for-react-2fja

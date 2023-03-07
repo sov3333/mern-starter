@@ -12,3 +12,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  border: solid;
+}
+
+li {
+  list-style-type: none;
+}
