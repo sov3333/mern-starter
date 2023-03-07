@@ -28,6 +28,11 @@ npm start
 3. Styling with Material UI
 `npm install @mui/material @mui/icons-material @emotion/react @emotion/styled`
 
+4. Add Dashboard template
+`npm i recharts`
+- https://mui.com/material-ui/getting-started/templates/
+- https://github.com/mui/material-ui/tree/v5.11.10/docs/data/material/getting-started/templates/dashboard
+
 ## Resources
 
 1. https://dev.to/pratham10/how-to-set-up-a-node-js-express-server-for-react-2fja
