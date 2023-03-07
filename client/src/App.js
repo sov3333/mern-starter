@@ -4,6 +4,7 @@ import './App.css';
 import CategoryDetails from './components/CategoryDetails';
 import Home from './components/Home';
 import Categories from './components/Categories';
+import Coin from './components/Coin';
 
 function App() {
   const [data, setData] = useState(null);
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/category" element={<Categories />} />
           <Route path="/category/:id" element={<CategoryDetails />} />
+          <Route path="/coins/:id" element={<Coin />} />
         </Routes>
       </main>
       <footer>

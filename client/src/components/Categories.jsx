@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const categoryArray = [
   'gaming',
-  'metaverse',
-  'play-to-earn',
+  // 'metaverse',
+  // 'play-to-earn',
   'guild-scholarship',
   'gambling',
   // 'decentralized-perpetuals',
@@ -32,7 +32,6 @@ const Categories = () => {
         for (let i=0; i<categoryArray.length; i++) {
           if (e.id === categoryArray[i]) {
             tempArray.push(e)
-            console.log(e)
           };
         }
       })
@@ -50,7 +49,7 @@ const Categories = () => {
         dataCGCoinsCategories.map((e, i) => (
           <div className="category" key={i}>
             <div>
-              <Link to={`/category/${e.id}`}>
+              <Link to={`/category/${e.id}`} state={{ slug: e.id }}>
                 <h4>{e.name}</h4>
               </Link>
               <div>
