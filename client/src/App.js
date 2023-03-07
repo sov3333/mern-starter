@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import { ResponsiveAppBar, StickyFooter } from './components';
 
 function App() {
   const [data, setData] = useState(null);
@@ -23,14 +24,20 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
+        <ResponsiveAppBar />
+      </header>
+      <div>
         <p>
           {!data ? "Loading..." : data}
         </p>
         <p>
           {!dataExternal ? "Loading..." : dataExternal.gecko_says }
         </p>
-      </header>
+      </div>
+      <div>
+        <StickyFooter />
+      </div>
     </div>
   );
 }
