@@ -12,7 +12,7 @@
 6. Add `PORT=3001` to `.env` file.
 
 To start:
-`npm start` in root.
+`npm start` in root, or `npm run dev` to run with nodemon.
 
 ### Setup React Client
 
